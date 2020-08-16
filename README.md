@@ -1,5 +1,5 @@
 # nodejs-static-file-server
-A node.js server to serve static files without using a framework
+A node.js server to serve static files without using a framework.
 
 I took code from an MDN article and I modified it slightly to serve static files that are saved in my public directory.
 
