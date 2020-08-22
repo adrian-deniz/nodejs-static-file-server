@@ -30,7 +30,7 @@ const port = 3000;
             '.ttf': 'application/font-ttf',
             '.eot': 'application/vnd.ms-fontobject',
             '.otf': 'application/font-otf',
-            '.wasm': 'application/wasm'
+            '.wasm': 'application/wasm',
         };
 
         let contentType = mimeTypes[extname] || 'application/octet-stream';
@@ -38,7 +38,7 @@ const port = 3000;
         fs.readFile(filePath, function(error, content) {
             if (error) {
                 if(error.code == 'ENOENT') {
-                    fs.readFile('./404.html', function(error, content) {
+                    fs.readFile('public/404.html', function(error, content) {
                         response.writeHead(404, { 'Content-Type': 'text/html' });
                         response.end(content, 'utf-8');
                     });
@@ -56,4 +56,3 @@ const port = 3000;
 
     }).listen(port);
     console.log(`Server running at http://127.0.0.1:${port}/`);
-
