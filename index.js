@@ -31,6 +31,7 @@ const port = 3000;
             '.eot': 'application/vnd.ms-fontobject',
             '.otf': 'application/font-otf',
             '.wasm': 'application/wasm',
+            '.ico' : 'image/x-icon'
         };
 
         let contentType = mimeTypes[extname] || 'application/octet-stream';
