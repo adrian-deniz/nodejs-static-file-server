@@ -1,7 +1,7 @@
-let http = require('http');
-let fs = require('fs');
-let path = require('path');
-const port = 3000;
+const http = require('http');
+const fs = require('fs');
+const path = require('path');
+const port = process.env.PORT || 3000; // use port 3000 unless there exists a preconfigured port
 
     http.createServer(function (request, response) {
         console.log('request ', request.url);
