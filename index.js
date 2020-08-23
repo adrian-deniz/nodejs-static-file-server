@@ -1,6 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const hostname = process.env.HOST || '127.0.0.1'; // use hostname 127.0.0.1 unless there exists a preconfigured port
 const port = process.env.PORT || 3000; // use port 3000 unless there exists a preconfigured port
 
     http.createServer(function (request, response) {
@@ -56,4 +57,4 @@ const port = process.env.PORT || 3000; // use port 3000 unless there exists a pr
         });
 
     }).listen(port);
-    console.log(`Server running at http://127.0.0.1:${port}/`);
+    console.log(`Server running at http://${hostname}:${port}/`);
